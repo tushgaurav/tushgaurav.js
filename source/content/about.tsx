@@ -1,27 +1,10 @@
 import React from "react";
-// import Link from "ink-link";
-import { Box, Newline, Text } from "ink";
+import { Newline, Text } from "ink";
 import { Content } from "../ui/primitives.js";
 import Gradient from "ink-gradient";
 import BigText from "ink-big-text";
+import { Section, Point } from "../ui/content.js";
 
-function Section({ children }: { children: React.ReactNode }) {
-    return (
-        <Box marginBottom={1}>
-            <Text>
-                {children}
-            </Text>
-        </Box>
-    )
-}
-function Point({ children }: { children: React.ReactNode }) {
-    return (
-        <>
-            <Text>• {children}</Text>
-            <Newline />
-        </>
-    )
-}
 
 export default function About() {
     return (
