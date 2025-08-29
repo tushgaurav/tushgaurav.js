@@ -8,18 +8,9 @@ import Link from "ink-link";
 import TextInput from "ink-text-input";
 import Spinner from 'ink-spinner';
 
+const PAGER_LAMBDA_URL = "https://5alqtcbkzxszr4ulzkihkfa7rm0yoygl.lambda-url.ap-south-1.on.aws/"
+
 export default function Contact() {
-    const [query, setQuery] = React.useState("");
-    const [isSending, setIsSending] = React.useState(false);
-
-    const handleSend = () => {
-        setIsSending(true);
-        setTimeout(() => {
-            setIsSending(false);
-        }, 2000);
-        console.log(query);
-    }
-
     return (
         <Content>
             <Gradient name="vice">
@@ -37,20 +28,49 @@ export default function Contact() {
                 <Point>Website: <Link url="https://tushgaurav.in">tushgaurav.in</Link></Point>
             </Section>
 
+
+            <PageMe />
+        </Content>
+    )
+}
+
+export function PageMe() {
+    const [message, setMessage] = React.useState("");
+    const [isSending, setIsSending] = React.useState(false);
+
+    const handleSend = async () => {
+        setIsSending(true);
+        await fetch(PAGER_LAMBDA_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message }),
+        });
+        setIsSending(false);
+    }
+
+    return (
+        <Box flexDirection="column">
+            <Text>
+                Page me:
+            </Text>
             <Box
-                marginTop={1}
                 paddingRight={1}
                 paddingLeft={1}
                 borderStyle="round"
                 borderColor="gray"
+                flexDirection="column"
             >
-                <Text>Your Message: </Text>
-                <TextInput
-                    value={query}
-                    onChange={setQuery}
-                    onSubmit={handleSend}
-                    placeholder="choore maanja"
-                />
+                <Box>
+                    <Text>Your Message: </Text>
+                    <TextInput
+                        value={message}
+                        onChange={setMessage}
+                        onSubmit={handleSend}
+                        placeholder="i'm just a fan"
+                    />
+                </Box>
             </Box>
             {isSending && (
                 <Text>
@@ -63,7 +83,6 @@ export default function Contact() {
                     Press <Text color="cyan">Enter</Text> to send your message.
                 </Text>
             )}
-
-        </Content>
+        </Box>
     )
 }
