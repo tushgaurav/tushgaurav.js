@@ -1,13 +1,14 @@
-![tushgaurav](./assets/images/banner.png)
+<!-- ![tushgaurav](./assets/images/banner.png) -->
 
 # tushgaurav
 
-A tiny interactive CLI that introduces me.
-Comes with easter eggs.
+[![npm version](https://img.shields.io/npm/v/tushgaurav.svg?color=%2300c853)](https://www.npmjs.com/package/tushgaurav)
+[![npm downloads](https://img.shields.io/npm/dm/tushgaurav.svg?color=%23009688)](https://www.npmjs.com/package/tushgaurav)
+[![node](https://img.shields.io/node/v/tushgaurav.svg)](https://www.npmjs.com/package/tushgaurav)
 
-- Website: https://tushgaurav.in
-- GitHub: https://github.com/tushgaurav
-- X/Twitter: https://x.com/tushgaurav
+
+A tiny interactive CLI that introduces me. This was made as a part of my learning journey to learn about CLI development.
+Comes with easter eggs.
 
 ## Quick start
 
@@ -21,17 +22,6 @@ Or install globally:
 npm install --global tushgaurav
 tushgaurav
 ```
-
-## Features
-
-- About
-  - A short bio, my mission, and what I’m building around secure OSS.
-- Contact from the terminal
-  - Send me a message without leaving the CLI.
-- Easter eggs
-  - Hidden commands and small storylets tied to my background.
-- Mini‑games
-  - “guess”, “secure-or-not”, and a tiny “telos-run” sim.
 
 ## Usage
 
@@ -72,3 +62,15 @@ npx tushgaurav contact
 
 - Messages sent via `contact` are stored for the purpose of replying.
 - No analytics leaving your machine unless explicitly mentioned in the prompt.
+
+## Resources
+
+- [ink](https://github.com/vadimdemedes/ink)
+- [ink-big-text](https://github.com/vadimdemedes/ink-big-text)
+- [ink-gradient](https://github.com/vadimdemedes/ink-gradient)
+- [ink-table](https://github.com/vadimdemedes/ink-table)
+- [ink-link](https://github.com/vadimdemedes/ink-link)
+- [ink-spinner](https://github.com/vadimdemedes/ink-spinner)
+- [ink-select-input](https://github.com/vadimdemedes/ink-select-input)
+- [ink-text-input](https://github.com/vadimdemedes/ink-text-input)
+- [ink-confirm](https://github.com/vadimdemedes/ink-confirm)
