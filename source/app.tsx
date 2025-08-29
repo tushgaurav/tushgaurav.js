@@ -5,6 +5,8 @@ import { MainLayout, SideBar } from './ui/primitives.js';
 // Content Components
 import About from './content/about.js';
 import Contact from './content/contact.js';
+import Resume from './content/resume.js';
+import Projects from './content/projects.js';
 
 type Props = {
 	name: string | undefined;
@@ -48,6 +50,9 @@ export default function App({ name = 'Stranger' }: Props) {
 				<SideBar navItems={navItems} onSelect={onNavItemSlected} />
 				{currentNavItem?.value === 'about' && <About />}
 				{currentNavItem?.value === 'contact' && <Contact />}
+				{currentNavItem?.value === 'projects' && <Projects />}
+				{currentNavItem?.value === 'resume' && <Resume />} 
+
 			</MainLayout>
 		</>
 	);
