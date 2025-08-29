@@ -42,8 +42,8 @@ export default function App({ name = 'Stranger' }: Props) {
 		}
 	};
 
+	console.log(`Hi ${name}!`);
 
-	console.log(name);
 	return (
 		<>
 			<MainLayout>
@@ -51,7 +51,7 @@ export default function App({ name = 'Stranger' }: Props) {
 				{currentNavItem?.value === 'about' && <About />}
 				{currentNavItem?.value === 'contact' && <Contact />}
 				{currentNavItem?.value === 'projects' && <Projects />}
-				{currentNavItem?.value === 'resume' && <Resume />} 
+				{currentNavItem?.value === 'resume' && <Resume />}
 
 			</MainLayout>
 		</>

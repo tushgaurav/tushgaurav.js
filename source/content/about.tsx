@@ -21,13 +21,6 @@ export default function About() {
                 <Point>I maintain dotfiles and experiment with design systems</Point>
                 <Point>I am a big fan of open source and I love to contribute to the community</Point>
             </Section>
-
-            <Section>
-                <Text>
-                    <Text color="cyan">Nodebench</Text> is a platform for benchmarking Node.js performance.
-                </Text>
-            </Section>
-
         </Content>
     )
 }

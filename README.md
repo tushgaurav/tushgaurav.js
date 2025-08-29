@@ -1,4 +1,4 @@
-<!-- ![tushgaurav](./assets/images/banner.png) -->
+![tushgaurav](./assets/images/banner.png)
 
 # tushgaurav
 
